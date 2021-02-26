@@ -48,8 +48,8 @@
 
 <section class="background full" />
 
-<button class="next control" on:click={nextPanorama}>+</button>
-<button class="prev control" on:click={prevPanorama}>-</button>
+<button class="next control" on:click={nextPanorama}>&lt;</button>
+<button class="prev control" on:click={prevPanorama}>&gt;</button>
 
 <style>
   section.background {
