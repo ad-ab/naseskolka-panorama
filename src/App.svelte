@@ -21,6 +21,7 @@
       container: document.querySelector("section.background"),
       controlButtons: ["fullscreen"],
       output: "console",
+      onMouseWheel: (...a) => console.log(a),
     });
 
     for (let img of images) {
@@ -46,10 +47,12 @@
   };
 </script>
 
-<section class="background full" />
+<section class="background full"></section>
 
-<button class="next control" on:click={nextPanorama}>&lt;</button>
-<button class="prev control" on:click={prevPanorama}>&gt;</button>
+<div class="flex">
+  <button class="prev control" on:click="{prevPanorama}">&lt;</button>
+  <button class="next control" on:click="{nextPanorama}">&gt;</button>
+</div>
 
 <style>
   section.background {
@@ -65,14 +68,34 @@
     height: 100%;
   }
 
+  .flex {
+    position: static;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    /* flex-direction: column; */
+    justify-content: space-between;
+    /* justify-items: center; */
+    align-items: center;
+  }
+
   .control {
-    color: red;
-    font-weight: 900;
-    position: absolute;
-    bottom: 40%;
+    font-weight: 700;
+    opacity: 60%;
+    /* position: absolute; */
+    bottom: 16px;
     font-size: 64px;
     cursor: pointer;
-    padding: 32px;
+    padding: 16px;
+    transition: opacity 0.3s;
+  }
+
+  .control:hover {
+    opacity: 85%;
   }
 
   .next {
