@@ -31,17 +31,25 @@
       if (img === "image1.jpg") {
         const infospot = new PANOLENS.Infospot();
         infospot.position.set(3147.02, -776.99, -3798.26);
-        infospot.addHoverText("Boby");
-        infospot.addEventListener("click", () => alert("toto jsou boby"));
+        // infospot.addHoverText("Boby");
+        // infospot.addEventListener("click", () => alert("toto jsou boby"));
+        infospot.addHoverElement(
+          document.getElementById("desc-container"),
+          100
+        );
         panorama.add(infospot);
-        console.log("infospot", infospot);
+        // onClick on infospot, populate a dynamic variable
       }
 
       if (img === "image2.jpg") {
         const infospot = new PANOLENS.Infospot(100);
         infospot.position.set(2744.37, -223.03, -4161.0);
-        infospot.addHoverText("Boby");
-        infospot.addEventListener("click", () => alert("toto jsou boby"));
+        // infospot.addHoverText("Boby");
+        // infospot.addEventListener("click", () => alert("toto jsou boby"));
+        infospot.addHoverElement(
+          document.getElementById("desc-container"),
+          100
+        );
         panorama.add(infospot);
         console.log("infospot", infospot);
       }
@@ -74,6 +82,13 @@
   <button class="next control" on:click="{nextPanorama}">&gt;</button>
 </div>
 
+<div id="desc-container" style="display:none">
+  <div class="title">Boby</div>
+  <div class="text">
+    Tyto boby se používaly v zimě na bobování z kopečku na druhém rohu zahrady.
+  </div>
+</div>
+
 <style>
   section.background {
     position: absolute;
@@ -86,6 +101,13 @@
   section.full {
     width: 100%;
     height: 100%;
+  }
+
+  #desc-container {
+    width: 300px;
+    color: black;
+    background-color: white;
+    padding: 16px;
   }
 
   .flex {
