@@ -21,11 +21,31 @@
       container: document.querySelector("section.background"),
       controlButtons: ["fullscreen"],
       output: "console",
+      autoHideInfospot: false,
       onMouseWheel: (...a) => console.log(a),
     });
 
     for (let img of images) {
       let panorama = new PANOLENS.ImagePanorama(`images/${img}`);
+
+      if (img === "image1.jpg") {
+        const infospot = new PANOLENS.Infospot();
+        infospot.position.set(3147.02, -776.99, -3798.26);
+        infospot.addHoverText("Boby");
+        infospot.addEventListener("click", () => alert("toto jsou boby"));
+        panorama.add(infospot);
+        console.log("infospot", infospot);
+      }
+
+      if (img === "image2.jpg") {
+        const infospot = new PANOLENS.Infospot(100);
+        infospot.position.set(2744.37, -223.03, -4161.0);
+        infospot.addHoverText("Boby");
+        infospot.addEventListener("click", () => alert("toto jsou boby"));
+        panorama.add(infospot);
+        console.log("infospot", infospot);
+      }
+
       panoramaArray.push(panorama);
       viewer.add(panorama);
     }
