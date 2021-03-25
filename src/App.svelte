@@ -1,5 +1,9 @@
 <script>
   import { onMount } from "svelte";
+  import Panolens from "./Panolense.js";
+  import { move } from "./images.js";
+
+  let PANOLENS = Panolens.PANOLENS;
 
   export let images = [
     "image1.jpg",
@@ -22,14 +26,18 @@
       controlButtons: ["fullscreen"],
       output: "console",
       autoHideInfospot: false,
-      onMouseWheel: (...a) => console.log(a),
+      autoRotate: true,
+      autoRotateSpeed: 0.5,
+      dampingFactor: 0.95,
+      speedLimit: 5,
+      autoRotateActivationDuration: 15000,
     });
 
     for (let img of images) {
       let panorama = new PANOLENS.ImagePanorama(`images/${img}`);
 
       if (img === "image1.jpg") {
-        const infospot = new PANOLENS.Infospot();
+        const infospot = new PANOLENS.Infospot(300);
         infospot.position.set(3147.02, -776.99, -3798.26);
         // infospot.addHoverText("Boby");
         // infospot.addEventListener("click", () => alert("toto jsou boby"));
@@ -38,7 +46,15 @@
           100
         );
         panorama.add(infospot);
-        // onClick on infospot, populate a dynamic variable
+
+        // Move spot
+        const infospot2 = new PANOLENS.Infospot(200, move);
+        infospot2.position.set(2356.02, -422.61, 4382.19);
+        infospot2.addEventListener("click", () => {
+          index = 1;
+          viewer.setPanorama(panoramaArray[index]);
+        });
+        panorama.add(infospot2);
       }
 
       if (img === "image2.jpg") {
@@ -52,6 +68,15 @@
         );
         panorama.add(infospot);
         console.log("infospot", infospot);
+
+        // Move spot
+        const infospot2 = new PANOLENS.Infospot(200, move);
+        infospot2.position.set(1077.26, -395.62, -4864.3);
+        infospot2.addEventListener("click", () => {
+          index = 0;
+          viewer.setPanorama(panoramaArray[index]);
+        });
+        panorama.add(infospot2);
       }
 
       panoramaArray.push(panorama);
@@ -75,11 +100,11 @@
   };
 </script>
 
-<section class="background full"></section>
+<section class="background full" />
 
 <div class="flex">
-  <button class="prev control" on:click="{prevPanorama}">&lt;</button>
-  <button class="next control" on:click="{nextPanorama}">&gt;</button>
+  <button class="prev control" on:click={prevPanorama}>&lt;</button>
+  <button class="next control" on:click={nextPanorama}>&gt;</button>
 </div>
 
 <div id="desc-container" style="display:none">
@@ -126,11 +151,13 @@
   }
 
   .control {
+    background: black;
+    color: white;
     font-weight: 700;
     opacity: 60%;
     /* position: absolute; */
     bottom: 16px;
-    font-size: 64px;
+    font-size: 32px;
     cursor: pointer;
     padding: 16px;
     transition: opacity 0.3s;
