@@ -5833,8 +5833,8 @@ const scene = new THREE.Scene();
     this.momentumKeydownFactor = 20;
 
     // Fov
-    this.minFov = 30;
-    this.maxFov = 120;
+    this.minFov = 40;
+    this.maxFov = 80;
 
     /*
      * How far you can orbit horizontally, upper and lower limits.

@@ -2,6 +2,7 @@
   import { onMount } from "svelte";
   import Panolens from "./Panolense.js";
   import { move } from "./images.js";
+  import * as THREE from "three";
 
   let PANOLENS = Panolens.PANOLENS;
 
@@ -13,6 +14,16 @@
     "image5.jpg",
     "image6.jpg",
     "image7.jpg",
+  ];
+
+  export let lookAt = [
+    new THREE.Vector3(4968.66, -130.67, 499.97),
+    new THREE.Vector3(4332.08, 132.5, 2484.72),
+    new THREE.Vector3(3059.66, -90.62, 3942.74),
+    new THREE.Vector3(-1289.41, 49.02, 4821.8),
+    new THREE.Vector3(4963.68, -312.66, -458.7),
+    new THREE.Vector3(4963.68, -312.66, -458.7),
+    new THREE.Vector3(4963.68, -312.66, -458.7),
   ];
   export let index = 0;
   const panoramaArray = [];
@@ -33,8 +44,13 @@
       autoRotateActivationDuration: 15000,
     });
 
-    for (let img of images) {
+    for (let [i, img] of images.entries()) {
       let panorama = new PANOLENS.ImagePanorama(`images/${img}`);
+      panorama.animationDuration = 0;
+      panorama.addEventListener("load", function () {
+        console.log("now");
+        viewer.tweenControlCenter(lookAt[i], 0);
+      });
 
       if (img === "image1.jpg") {
         const infospot = new PANOLENS.Infospot(300);
@@ -54,6 +70,7 @@
           index = 1;
           viewer.setPanorama(panoramaArray[index]);
         });
+
         panorama.add(infospot2);
       }
 
@@ -67,7 +84,6 @@
           100
         );
         panorama.add(infospot);
-        console.log("infospot", infospot);
 
         // Move spot
         const infospot2 = new PANOLENS.Infospot(200, move);
