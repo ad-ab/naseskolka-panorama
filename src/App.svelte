@@ -46,9 +46,8 @@
 
     for (let [i, img] of images.entries()) {
       let panorama = new PANOLENS.ImagePanorama(`images/${img}`);
-      panorama.animationDuration = 0;
+      panorama.animationDuration = 800;
       panorama.addEventListener("load", function () {
-        console.log("now");
         viewer.tweenControlCenter(lookAt[i], 0);
       });
 
