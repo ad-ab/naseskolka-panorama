@@ -6321,13 +6321,19 @@ const scene = new THREE.Scene();
         delta = -event.detail;
       }
 
+      const fovStep = 5;
+
       if (delta < 0) {
         scope.object.fov =
-          scope.object.fov < scope.maxFov ? scope.object.fov + 1 : scope.maxFov;
+          scope.object.fov < scope.maxFov
+            ? scope.object.fov + fovStep
+            : scope.maxFov;
         scope.object.updateProjectionMatrix();
       } else if (delta > 0) {
         scope.object.fov =
-          scope.object.fov > scope.minFov ? scope.object.fov - 1 : scope.minFov;
+          scope.object.fov > scope.minFov
+            ? scope.object.fov - fovStep
+            : scope.minFov;
         scope.object.updateProjectionMatrix();
       }
 

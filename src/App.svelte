@@ -116,7 +116,7 @@
   };
 </script>
 
-<section class="background full" />
+<section class="background" />
 
 <div class="flex">
   <button class="prev control" on:click={prevPanorama}>&lt;</button>
@@ -133,15 +133,16 @@
 <style>
   section.background {
     position: absolute;
-    top: 0;
-    left: 0;
-    cursor: -webkit-grab;
-    cursor: grab;
-  }
-
-  section.full {
     width: 100%;
     height: 100%;
+    max-width: 100%;
+    max-height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    cursor: -webkit-grab;
+    cursor: grab;
   }
 
   #desc-container {
