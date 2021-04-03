@@ -1,44 +1,37 @@
 [
   {
     "id": "vstup",
-    "url": "image1.jpg",
-    "vector": "4968.66, -130.67, 499.97",
-    "description": "První fotka v pořadí"
+    "url": "1-vchod.jpg",
+    "lat": 5,
+    "long": 5,
+    "description": "Vstup do školky"
   },
   {
-    "id": "zahrada1",
-    "url": "image2.jpg",
-    "vector": "4332.08, 132.5, 2484.72",
-    "description": "První fotka v pořadí"
+    "id": "2-chodba",
+    "url": "2-chodba-zabky.jpg",
+    "lat": 5,
+    "long": 5,
+    "description": "Chodba - žabky"
   },
   {
-    "id": "zahrada2",
-    "url": "image3.jpg",
-    "vector": "3059.66, -90.62, 3942.74",
-    "description": "První fotka v pořadí"
+    "id": "3-chodba",
+    "url": "3-chodba-jezci.jpg",
+    "lat": 5,
+    "long": 5,
+    "description": "Chodba - ježci"
   },
   {
-    "id": "zahrada3",
-    "url": "image4.jpg",
-    "vector": "-1289.41, 49.02, 4821.8",
-    "description": "První fotka v pořadí"
+    "id": "4-chodba",
+    "url": "4-chodba-veverky.jpg",
+    "lat": 5,
+    "long": 5,
+    "description": "Chodba - veverky"
   },
   {
-    "id": "zahrada4",
-    "url": "image5.jpg",
-    "vector": "4963.68, -312.66, -458.7",
-    "description": "První fotka v pořadí"
-  },
-  {
-    "id": "zahrada5",
-    "url": "image6.jpg",
-    "vector": "4963.68, -312.66, -458.7",
-    "description": "První fotka v pořadí"
-  },
-  {
-    "id": "chodba",
-    "url": "image7.jpg",
-    "vector": "4963.68, -312.66, -458.7",
-    "description": "První fotka v pořadí"
+    "id": "5-chodba",
+    "url": "5-chodba-delfini.jpg",
+    "lat": 5,
+    "long": 5,
+    "description": "Chodba - delfíni"
   }
 ]
