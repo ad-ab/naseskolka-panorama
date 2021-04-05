@@ -2,36 +2,64 @@
   {
     "id": "vstup",
     "url": "1-vchod.jpg",
-    "lat": 5,
-    "long": 5,
-    "description": "Vstup do školky"
+    "longitude": 1.5277471873567117,
+    "latitude": -0.12839228313377116,
+    "caption": "Vstup do školky"
   },
   {
     "id": "2-chodba",
     "url": "2-chodba-zabky.jpg",
-    "lat": 5,
-    "long": 5,
-    "description": "Chodba - žabky"
+    "longitude": 3.0738083875147764,
+    "latitude": -0.06481505816574873,
+    "caption": "Chodba - Žabky"
+  },
+  {
+    "id": "2-satna",
+    "url": "9-zabky-satna.jpg",
+    "longitude": 1.032008910091576,
+    "latitude": 0.11019712932860948,
+    "caption": "Šatna - Žabky"
   },
   {
     "id": "3-chodba",
     "url": "3-chodba-jezci.jpg",
-    "lat": 5,
-    "long": 5,
-    "description": "Chodba - ježci"
+    "longitude": 3.2069669905896387,
+    "latitude": -0.08194229946563136,
+    "caption": "Chodba - Ježci"
+  },
+  {
+    "id": "3-satna",
+    "url": "8-jezci-satna.jpg",
+    "longitude": 5.4400662995025195,
+    "latitude": 0.16640764144348608,
+    "caption": "Šatna - Ježci"
   },
   {
     "id": "4-chodba",
     "url": "4-chodba-veverky.jpg",
-    "lat": 5,
-    "long": 5,
-    "description": "Chodba - veverky"
+    "longitude": 3.1238896560743363,
+    "latitude": -0.05806182240946223,
+    "caption": "Chodba - Veverky"
+  },
+  {
+    "id": "4-satna",
+    "url": "7-veverky-satna.jpg",
+    "longitude": 5.1112439379689985,
+    "latitude": 0.015287352169683244,
+    "caption": "Šatna - Veverky"
   },
   {
     "id": "5-chodba",
     "url": "5-chodba-delfini.jpg",
-    "lat": 5,
-    "long": 5,
-    "description": "Chodba - delfíni"
+    "longitude": 3.060835352412499,
+    "latitude": -0.06263169030689486,
+    "caption": "Chodba - delfíni"
+  },
+  {
+    "id": "5-satna",
+    "url": "6-deflini-satna.jpg",
+    "longitude": 5.449802975775333,
+    "latitude": 0.004133489822154113,
+    "caption": "Šatna - delfíni"
   }
 ]

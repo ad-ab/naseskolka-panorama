@@ -1,0 +1,52 @@
+[
+  {
+    "id": "1-vstup",
+    "target": "2-chodba",
+    "tooltip": "Chodba",
+    "img": "next.png",
+    "photos": [
+      {
+        "id": "vstup",
+        "longitude": 1.5528111104951692,
+        "latitude": -0.08365812467026101
+      }
+    ]
+  },
+  {
+    "id": "1-nastenka",
+    "tooltip": "Nástěnka",
+    "img": "info.png",
+    "photos": [
+      {
+        "id": "vstup",
+        "longitude": 0.026223455348388852,
+        "latitude": 0.6912666533926979
+      }
+    ]
+  },
+  {
+    "id": "1-nastenka-2",
+    "tooltip": "Nástěnka<img width='300' height='200' src='images/1-vchod.jpg' />",
+    "img": "info.png",
+    "photos": [
+      {
+        "id": "vstup",
+        "longitude": 3.139512645268891,
+        "latitude": 0.5683672423644475
+      }
+    ]
+  },
+  {
+    "id": "chodba-zpet",
+    "target": "vstup",
+    "tooltip": "Vstup",
+    "img": "next.png",
+    "photos": [
+      {
+        "id": "2-chodba",
+        "longitude": 1.5488063013031963,
+        "latitude": -0.025261599295222537
+      }
+    ]
+  }
+]

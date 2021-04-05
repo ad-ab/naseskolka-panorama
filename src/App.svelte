@@ -6,64 +6,55 @@
   import "photo-sphere-viewer/dist/plugins/markers.css";
 
   export let index = 0;
+  let panoramaArray = [];
+  let spots = [];
   let viewer;
+  let isLoading = false;
+  let markersPlugin;
 
-  onMount(async () => {
+  const loadMarkers = (pan) => {
+    const photoId = pan.id;
+
+    const filteredSpots = spots
+      .filter(({ photos }) => photos.find(({ id }) => id === photoId))
+      .map((mark) => {
+        const photo = mark.photos.find(({ id }) => id === photoId);
+        return {
+          tooltip: mark.description,
+          width: 64,
+          height: 64,
+          scale: [0.5, 1],
+          ...mark,
+          image: `assets/${mark.img}`,
+          latitude: photo.latitude,
+          longitude: photo.longitude,
+        };
+      });
+
+    markersPlugin.setMarkers(filteredSpots);
+  };
+
+  // Once we have data event
+  $: if (panoramaArray && panoramaArray.length > 0) {
+    const pan = panoramaArray[0];
     viewer = new Viewer({
       container: document.querySelector("#viewer"),
-      panorama: "images/1-vchod.jpg",
-      // defaultLat: 3,
+      panorama: `images/${pan.url}`,
+      caption: pan.caption,
       touchmoveTwoFingers: true,
 
-      // defaultLat: -Math.PI / 2,
-      // defaultLong: Math.PI,
       defaultZoomLvl: 0,
       fisheye: 4,
       navbar: ["zoom", "caption", "fullscreen"],
-      plugins: [
-        [
-          MarkersPlugin,
-          {
-            markers: [
-              {
-                id: "new-marker",
-                longitude: "45deg",
-                latitude: "0deg",
-                width: 32,
-                height: 32,
-                // data: document.getElementById("lorem-content").innerHTML,
-                image: "assets/info.png",
-                clickEventOnMarker: () => alert(JSON.stringify(data)),
-              },
-            ],
-          },
-        ],
-      ],
-    });
-
-    const markersPlugin = viewer.getPlugin(MarkersPlugin);
-
-    markersPlugin.on("select-marker", (e, marker) => {
-      console.log(marker.$el, marker.data);
-      const pos = marker.$el.getBoundingClientRect();
-      console.log(pos);
-
-      // markersPlugin.updateMarker({
-      //   id: marker.id,
-      //   image: "assets/pin-blue.png",
-      // });
-    });
-
-    markersPlugin.on("unselect-marker", (marker) => {
-      console.log("aaaaaa");
+      plugins: [[MarkersPlugin]],
     });
 
     function intro() {
       new Animation({
         properties: {
-          lat: { start: -Math.PI / 2, end: 0 },
-          long: { start: Math.PI, end: 5 },
-          zoom: { start: 0, end: 50 },
+          lat: { start: -Math.PI / 2, end: pan.latitude },
+          long: { start: Math.PI, end: pan.longitude },
+          zoom: { start: 0, end: 30 },
           fisheye: { start: 2, end: 0 },
         },
         duration: 2000,
@@ -82,36 +73,76 @@
     viewer.on("ready", intro);
     viewer.on("click", (e, data) => {
       data.rightclick &&
-        console.log(data, `long:${data.longitude}, lat:${data.latitude}`);
+        console.log(`longitude:${data.longitude}, latitude:${data.latitude}`);
     });
+
+    markersPlugin = viewer.getPlugin(MarkersPlugin);
+
+    markersPlugin.on("select-marker", (e, marker) => {
+      const { target } = marker.config;
+      if (target) {
+        index = panoramaArray.indexOf(
+          panoramaArray.find((p) => p.id === target)
+        );
+      }
+    });
+
+    markersPlugin.on("unselect-marker", (marker) => {});
+  }
+
+  $: if (viewer && panoramaArray && panoramaArray.length > 0) {
+    const pan = panoramaArray[index];
+
+    // set panorama
+    isLoading = true;
+    markersPlugin.clearMarkers();
+    if (pan) {
+      console.log("setpanroam", pan);
+      viewer
+        .setPanorama(`images/${pan.url}`, { ...pan, transition: 500 })
+        .then(() => loadMarkers(pan))
+        .finally(() => (isLoading = false));
+      viewer.setOptions({ caption: pan.caption });
+    }
+  }
+
+  onMount(async () => {
+    fetch("images.json")
+      .then((response) => response.json())
+      .then((data) => {
+        panoramaArray = data;
+      });
+    fetch("imagespots.json")
+      .then((response) => response.json())
+      .then((data) => {
+        spots = data;
+      });
   });
 
   const nextPanorama = () => {
-    index = (index + 1) % panoramaArray.length;
-    viewer.setPanorama(panoramaArray[index]);
+    index = ++index % panoramaArray.length;
   };
   const prevPanorama = () => {
-    if (index == 0) {
-      index = panoramaArray.length - 1;
-    } else {
-      index = index - 1;
-    }
-    viewer.setPanorama(panoramaArray[index]);
+    index = (--index + panoramaArray.length) % panoramaArray.length;
+    console.log(index);
   };
 </script>
 
 <div id="viewer" />
 <div class="flex">
-  <button class="prev control" on:click={prevPanorama}>&lt;</button>
-  <button class="next control" on:click={nextPanorama}>&gt;</button>
+  <button class="prev control" disabled={isLoading} on:click={prevPanorama}
+    >&lt;</button
+  >
+  <button class="next control" disabled={isLoading} on:click={nextPanorama}
+    >&gt;</button
+  >
 </div>
 
-<!-- <div id="lorem-content">
-  <h1>Test</h1>
-
-  <div>Blablablablalablaba abl bal blab lab lablabl alb</div>
-</div> -->
 <style>
+  :global(.psv-tooltip) {
+    max-width: 600px !important;
+  }
+
   /* the viewer container must have a defined size */
   #viewer {
     width: 100%;
@@ -133,7 +164,7 @@
     align-items: center;
   }
   .control {
-    z-index: 100;
+    z-index: 200;
     background: black;
     color: white;
     font-weight: 700;
@@ -148,6 +179,9 @@
 
   .control:hover {
     opacity: 85%;
+  }
+  .control:disabled {
+    cursor: wait;
   }
   .next {
     right: 0;
