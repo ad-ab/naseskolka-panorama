@@ -1,158 +1,156 @@
 <script>
   import { onMount } from "svelte";
-  import Panolens from "./Panolense.js";
-  import { move } from "./images.js";
-  import * as THREE from "three";
+  import { Viewer, Animation } from "photo-sphere-viewer";
+  import MarkersPlugin from "photo-sphere-viewer/dist/plugins/markers";
+  import "photo-sphere-viewer/dist/photo-sphere-viewer.css";
+  import "photo-sphere-viewer/dist/plugins/markers.css";
 
-  let PANOLENS = Panolens.PANOLENS;
-
-  export let images = [
-    "image1.jpg",
-    "image2.jpg",
-    "image3.jpg",
-    "image4.jpg",
-    "image5.jpg",
-    "image6.jpg",
-    "image7.jpg",
-  ];
-
-  export let lookAt = [
-    new THREE.Vector3(4968.66, -130.67, 499.97),
-    new THREE.Vector3(4332.08, 132.5, 2484.72),
-    new THREE.Vector3(3059.66, -90.62, 3942.74),
-    new THREE.Vector3(-1289.41, 49.02, 4821.8),
-    new THREE.Vector3(4963.68, -312.66, -458.7),
-    new THREE.Vector3(4963.68, -312.66, -458.7),
-    new THREE.Vector3(4963.68, -312.66, -458.7),
-  ];
   export let index = 0;
-  const panoramaArray = [];
-
+  let panoramaArray = [];
+  let spots = [];
   let viewer;
+  let isLoading = false;
+  let markersPlugin;
 
-  onMount(async () => {
-    viewer = new PANOLENS.Viewer({
-      controlBar: true,
-      container: document.querySelector("section.background"),
-      controlButtons: ["fullscreen"],
-      output: "console",
-      autoHideInfospot: false,
-      autoRotate: true,
-      autoRotateSpeed: 0.5,
-      dampingFactor: 0.95,
-      speedLimit: 5,
-      autoRotateActivationDuration: 15000,
-    });
+  const loadMarkers = (pan) => {
+    const photoId = pan.id;
 
-    for (let [i, img] of images.entries()) {
-      let panorama = new PANOLENS.ImagePanorama(`images/${img}`);
-      panorama.animationDuration = 800;
-      panorama.addEventListener("load", function () {
-        viewer.tweenControlCenter(lookAt[i], 0);
+    const filteredSpots = spots
+      .filter(({ photos }) => photos.find(({ id }) => id === photoId))
+      .map((mark) => {
+        const photo = mark.photos.find(({ id }) => id === photoId);
+        return {
+          tooltip: mark.description,
+          width: 64,
+          height: 64,
+          scale: [0.5, 1],
+          ...mark,
+          image: `assets/${mark.img}`,
+          latitude: photo.latitude,
+          longitude: photo.longitude,
+        };
       });
 
-      if (img === "image1.jpg") {
-        const infospot = new PANOLENS.Infospot(300);
-        infospot.position.set(3147.02, -776.99, -3798.26);
-        // infospot.addHoverText("Boby");
-        // infospot.addEventListener("click", () => alert("toto jsou boby"));
-        infospot.addHoverElement(
-          document.getElementById("desc-container"),
-          100
-        );
-        panorama.add(infospot);
+    markersPlugin.setMarkers(filteredSpots);
+  };
 
-        // Move spot
-        const infospot2 = new PANOLENS.Infospot(200, move);
-        infospot2.position.set(2356.02, -422.61, 4382.19);
-        infospot2.addEventListener("click", () => {
-          index = 1;
-          viewer.setPanorama(panoramaArray[index]);
-        });
+  // Once we have data event
+  $: if (panoramaArray && panoramaArray.length > 0) {
+    const pan = panoramaArray[0];
+    viewer = new Viewer({
+      container: document.querySelector("#viewer"),
+      panorama: `images/${pan.url}`,
+      caption: pan.caption,
+      touchmoveTwoFingers: true,
 
-        panorama.add(infospot2);
-      }
+      defaultZoomLvl: 0,
+      fisheye: 4,
+      navbar: ["zoom", "caption", "fullscreen"],
+      plugins: [[MarkersPlugin]],
+    });
 
-      if (img === "image2.jpg") {
-        const infospot = new PANOLENS.Infospot(100);
-        infospot.position.set(2744.37, -223.03, -4161.0);
-        // infospot.addHoverText("Boby");
-        // infospot.addEventListener("click", () => alert("toto jsou boby"));
-        infospot.addHoverElement(
-          document.getElementById("desc-container"),
-          100
-        );
-        panorama.add(infospot);
-
-        // Move spot
-        const infospot2 = new PANOLENS.Infospot(200, move);
-        infospot2.position.set(1077.26, -395.62, -4864.3);
-        infospot2.addEventListener("click", () => {
-          index = 0;
-          viewer.setPanorama(panoramaArray[index]);
-        });
-        panorama.add(infospot2);
-      }
-
-      panoramaArray.push(panorama);
-      viewer.add(panorama);
+    function intro() {
+      new Animation({
+        properties: {
+          lat: { start: -Math.PI / 2, end: pan.latitude },
+          long: { start: Math.PI, end: pan.longitude },
+          zoom: { start: 0, end: 30 },
+          fisheye: { start: 2, end: 0 },
+        },
+        duration: 2000,
+        easing: "inOutQuad",
+        onTick: (properties) => {
+          viewer.setOption("fisheye", properties.fisheye);
+          viewer.rotate({
+            longitude: properties.long,
+            latitude: properties.lat,
+          });
+          viewer.zoom(properties.zoom);
+        },
+      });
     }
 
-    viewer.setPanorama(panoramaArray[index]);
+    viewer.on("ready", intro);
+    viewer.on("click", (e, data) => {
+      data.rightclick &&
+        console.log(`longitude:${data.longitude}, latitude:${data.latitude}`);
+    });
+
+    markersPlugin = viewer.getPlugin(MarkersPlugin);
+
+    markersPlugin.on("select-marker", (e, marker) => {
+      const { target } = marker.config;
+      if (target) {
+        index = panoramaArray.indexOf(
+          panoramaArray.find((p) => p.id === target)
+        );
+      }
+    });
+
+    markersPlugin.on("unselect-marker", (marker) => {});
+  }
+
+  $: if (viewer && panoramaArray && panoramaArray.length > 0) {
+    const pan = panoramaArray[index];
+
+    // set panorama
+    isLoading = true;
+    markersPlugin.clearMarkers();
+    if (pan) {
+      console.log("setpanroam", pan);
+      viewer
+        .setPanorama(`images/${pan.url}`, { ...pan, transition: 500 })
+        .then(() => loadMarkers(pan))
+        .finally(() => (isLoading = false));
+      viewer.setOptions({ caption: pan.caption });
+    }
+  }
+
+  onMount(async () => {
+    fetch("images.json")
+      .then((response) => response.json())
+      .then((data) => {
+        panoramaArray = data;
+      });
+    fetch("imagespots.json")
+      .then((response) => response.json())
+      .then((data) => {
+        spots = data;
+      });
   });
 
   const nextPanorama = () => {
-    index = (index + 1) % panoramaArray.length;
-    viewer.setPanorama(panoramaArray[index]);
+    index = ++index % panoramaArray.length;
   };
   const prevPanorama = () => {
-    if (index == 0) {
-      index = panoramaArray.length - 1;
-    } else {
-      index = index - 1;
-    }
-    viewer.setPanorama(panoramaArray[index]);
+    index = (--index + panoramaArray.length) % panoramaArray.length;
+    console.log(index);
   };
 </script>
 
-<section class="background" />
-
+<div id="viewer" />
 <div class="flex">
-  <button class="prev control" on:click={prevPanorama}>&lt;</button>
-  <button class="next control" on:click={nextPanorama}>&gt;</button>
-</div>
-
-<div id="desc-container" style="display:none">
-  <div class="title">Boby</div>
-  <div class="text">
-    Tyto boby se používaly v zimě na bobování z kopečku na druhém rohu zahrady.
-  </div>
+  <button class="prev control" disabled={isLoading} on:click={prevPanorama}
+    >&lt;</button
+  >
+  <button class="next control" disabled={isLoading} on:click={nextPanorama}
+    >&gt;</button
+  >
 </div>
 
 <style>
-  section.background {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    max-width: 100%;
-    max-height: 100%;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    cursor: -webkit-grab;
-    cursor: grab;
+  :global(.psv-tooltip) {
+    max-width: 600px !important;
   }
 
-  #desc-container {
-    width: 300px;
-    color: black;
-    background-color: white;
-    padding: 16px;
+  /* the viewer container must have a defined size */
+  #viewer {
+    width: 100%;
+    height: 100%;
   }
 
   .flex {
-    position: static;
+    position: absolute;
     width: 100%;
     height: 100%;
     left: 0;
@@ -165,8 +163,8 @@
     /* justify-items: center; */
     align-items: center;
   }
-
   .control {
+    z-index: 200;
     background: black;
     color: white;
     font-weight: 700;
@@ -182,7 +180,9 @@
   .control:hover {
     opacity: 85%;
   }
-
+  .control:disabled {
+    cursor: wait;
+  }
   .next {
     right: 0;
   }

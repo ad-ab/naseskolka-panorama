@@ -43,10 +43,21 @@ export default {
   },
   plugins: [
     // copy({
-    // 	targets: [
-    // 	{ src: 'node_modules/three/build/three.min.js', dest: 'public/vendor/three' },
-    // 	{ src: 'node_modules/panolens/build/panolens.min.js', dest: 'public/vendor/panolens' },
-    // 	]}),
+    //   targets: [
+    //     {
+    //       src: "node_modules/three/build/three.min.js",
+    //       dest: "public/vendor/three",
+    //     },
+    //     {
+    //       src: "node_modules/three/build/three.min.js",
+    //       dest: "public/vendor/three",
+    //     },
+    //     {
+    //       src: "node_modules/three/build/three.min.js",
+    //       dest: "public/vendor/three",
+    //     },
+    //   ],
+    // }),
     svelte({
       compilerOptions: {
         // enable run-time checks when not in production
