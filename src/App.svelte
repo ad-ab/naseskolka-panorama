@@ -41,7 +41,6 @@
       container: document.querySelector("#viewer"),
       panorama: `images/${pan.url}`,
       caption: pan.caption,
-      touchmoveTwoFingers: true,
 
       defaultZoomLvl: 0,
       fisheye: 4,
