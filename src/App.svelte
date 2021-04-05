@@ -79,6 +79,7 @@
 
     markersPlugin.on("select-marker", (e, marker) => {
       const { target } = marker.config;
+      marker.showTooltip(e);
       if (target) {
         index = panoramaArray.indexOf(
           panoramaArray.find((p) => p.id === target)
@@ -86,7 +87,9 @@
       }
     });
 
-    markersPlugin.on("unselect-marker", (marker) => {});
+    markersPlugin.on("unselect-marker", (marker) => {
+      marker.hideTooltip();
+    });
   }
 
   $: if (viewer && panoramaArray && panoramaArray.length > 0) {
@@ -96,7 +99,6 @@
     isLoading = true;
     markersPlugin.clearMarkers();
     if (pan) {
-      console.log("setpanroam", pan);
       viewer
         .setPanorama(`images/${pan.url}`, { ...pan, transition: 500 })
         .then(() => loadMarkers(pan))

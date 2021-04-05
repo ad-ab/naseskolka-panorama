@@ -1,18 +1,5 @@
 [
   {
-    "id": "1-vstup",
-    "target": "2-chodba",
-    "tooltip": "Chodba",
-    "img": "next.png",
-    "photos": [
-      {
-        "id": "vstup",
-        "longitude": 1.5528111104951692,
-        "latitude": -0.08365812467026101
-      }
-    ]
-  },
-  {
     "id": "1-nastenka",
     "tooltip": "Nástěnka",
     "img": "info.png",
@@ -37,6 +24,29 @@
     ]
   },
   {
+    "id": "1-vstup",
+    "target": "2-chodba",
+    "tooltip": "Chodba - Žabky",
+    "img": "next.png",
+    "photos": [
+      {
+        "id": "vstup",
+        "longitude": 1.5528111104951692,
+        "latitude": -0.08365812467026101
+      },
+      {
+        "id": "2-satna",
+        "longitude": 4.212045961603054,
+        "latitude": -0.07078685835059306
+      },
+      {
+        "id": "3-chodba",
+        "longitude": 1.6431803867082615,
+        "latitude": -0.4305469688433563
+      }
+    ]
+  },
+  {
     "id": "chodba-zpet",
     "target": "vstup",
     "tooltip": "Vstup",
@@ -46,6 +56,211 @@
         "id": "2-chodba",
         "longitude": 1.5488063013031963,
         "latitude": -0.025261599295222537
+      }
+    ]
+  },
+  {
+    "id": "satna-zabky",
+    "target": "2-satna",
+    "tooltip": "Šatna - Žabky",
+    "img": "next.png",
+    "photos": [
+      {
+        "id": "2-chodba",
+        "longitude": 3.0643347585527607,
+        "latitude": -0.07189903627619953
+      }
+    ]
+  },
+  {
+    "id": "chodba-jezci",
+    "target": "3-chodba",
+    "tooltip": "Chodba - Ježci",
+    "img": "next.png",
+    "photos": [
+      {
+        "id": "2-chodba",
+        "longitude": 4.573505761538147,
+        "latitude": -0.4675485474917327
+      },
+      {
+        "id": "3-satna",
+        "longitude": 2.393582841778416,
+        "latitude": -0.034757373139980396
+      },
+      {
+        "id": "4-chodba",
+        "longitude": 1.5882016381955535,
+        "latitude": -0.41063004365503764
+      }
+    ]
+  },
+  {
+    "id": "satna-jezci",
+    "target": "3-satna",
+    "tooltip": "Šatna - Žabky",
+    "img": "next.png",
+    "photos": [
+      {
+        "id": "3-chodba",
+        "longitude": 3.188359047961927,
+        "latitude": -0.05119071411919629
+      }
+    ]
+  },
+  {
+    "id": "chodba-veverky",
+    "target": "4-chodba",
+    "tooltip": "Chodba - Ježci",
+    "img": "next.png",
+    "photos": [
+      {
+        "id": "3-chodba",
+        "longitude": 4.64855985790185,
+        "latitude": -0.469072876886234
+      },
+      {
+        "id": "4-satna",
+        "longitude": 1.933386905814407,
+        "latitude": -0.10240427065957514
+      },
+      {
+        "id": "5-chodba",
+        "longitude": 1.5663767576111256,
+        "latitude": -0.42952186359521605
+      }
+    ]
+  },
+  {
+    "id": "satna-veverky",
+    "target": "4-satna",
+    "tooltip": "Šatna - Veverky",
+    "img": "next.png",
+    "photos": [
+      {
+        "id": "4-chodba",
+        "longitude": 3.188359047961927,
+        "latitude": -0.05119071411919629
+      }
+    ]
+  },
+  {
+    "id": "chodba-delfinci",
+    "target": "5-chodba",
+    "tooltip": "Chodba - Ježci",
+    "img": "next.png",
+    "photos": [
+      {
+        "id": "4-chodba",
+        "longitude": 4.716372643645762,
+        "latitude": -0.4916843825748938
+      },
+      {
+        "id": "5-satna",
+        "longitude": 5.482668536361971,
+        "latitude": -0.05200076153867217
+      },
+      {
+        "id": "chodba-1-patro",
+        "longitude": 5.31633238488449,
+        "latitude": -0.5880144502433549
+      }
+    ]
+  },
+  {
+    "id": "satna-delfinci",
+    "target": "5-satna",
+    "tooltip": "Šatna - Delfínci",
+    "img": "next.png",
+    "photos": [
+      {
+        "id": "5-chodba",
+        "longitude": 3.030337453417041,
+        "latitude": -0.1702476725764397
+      }
+    ]
+  },
+  {
+    "id": "schody-do-1-patra",
+    "target": "chodba-1-patro",
+    "tooltip": "Chodba 1. Patro",
+    "img": "next.png",
+    "photos": [
+      {
+        "id": "5-chodba",
+        "longitude": 4.696700361685934,
+        "latitude": -0.13735622301382966
+      },
+      {
+        "id": "zabky-1",
+        "longitude": 6.160381071690755,
+        "latitude": -0.0749014357947797
+      }
+    ]
+  },
+  {
+    "id": "nastenka-adopce",
+    "tooltip": "Nastenka - Obrazek",
+    "img": "info.png",
+    "photos": [
+      {
+        "id": "chodba-1-patro",
+        "longitude": 5.3548682082399095,
+        "latitude": -0.13995933196673804
+      },
+      {
+        "id": "5-chodba",
+        "longitude": 4.626938754958308,
+        "latitude": 0.33040962180316713
+      }
+    ]
+  },
+  {
+    "id": "zabky-vstup",
+    "target": "zabky-1",
+    "tooltip": "Třída Žabky",
+    "img": "next.png",
+    "photos": [
+      {
+        "id": "chodba-1-patro",
+        "longitude": 4.713835114643674,
+        "latitude": 0.0015341186023609676
+      },
+      {
+        "id": "zabky-wc",
+        "longitude": 5.888779414072508,
+        "latitude": -0.3294653262622127
+      },
+      {
+        "id": "zabky-3",
+        "longitude": 5.845526704253434,
+        "latitude": -0.03401532102997118
+      }
+    ]
+  },
+  {
+    "id": "zabky-herna",
+    "target": "zabky-3",
+    "tooltip": "Herna Žabky",
+    "img": "next.png",
+    "photos": [
+      {
+        "id": "zabky-1",
+        "longitude": 3.1069876795218687,
+        "latitude": 0.02264470661721374
+      }
+    ]
+  },
+  {
+    "id": "zabky-wc",
+    "target": "zabky-wc",
+    "tooltip": "Žabky WC",
+    "img": "next.png",
+    "photos": [
+      {
+        "id": "zabky-1",
+        "longitude": 5.024733164854425,
+        "latitude": -0.062398998264754146
       }
     ]
   }

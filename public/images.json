@@ -61,5 +61,33 @@
     "longitude": 5.449802975775333,
     "latitude": 0.004133489822154113,
     "caption": "Šatna - delfíni"
+  },
+  {
+    "id": "chodba-1-patro",
+    "url": "20-chodba-jezci-zabky.jpg",
+    "longitude": 5.449802975775333,
+    "latitude": 0.004133489822154113,
+    "caption": "Chodba - První patro"
+  },
+  {
+    "id": "zabky-1",
+    "url": "12-zabky-1.jpg",
+    "longitude": 5.449802975775333,
+    "latitude": 0.004133489822154113,
+    "caption": "Žabky - stoly"
+  },
+  {
+    "id": "zabky-3",
+    "url": "14-zabky-3.jpg",
+    "longitude": 5.449802975775333,
+    "latitude": 0.004133489822154113,
+    "caption": "Žabky - WC"
+  },
+  {
+    "id": "zabky-wc",
+    "url": "15-zabky-zachod.jpg",
+    "longitude": 4.041731985868891,
+    "latitude": -0.04868940004358002,
+    "caption": "Žabky - WC"
   }
 ]
