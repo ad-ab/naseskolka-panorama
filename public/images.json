@@ -150,22 +150,36 @@
   {
     "id": "delfini-1",
     "url": "25-delfini-1.jpg",
-    "longitude": 0.6569432563868906,
-    "latitude": -0.09161765949968581,
+    "longitude": 2.5820142825500985,
+    "latitude": -0.004116612085534932,
     "caption": "Delfínci - Stoly"
   },
   {
     "id": "delfini-2",
     "url": "26-delfini-2.jpg",
-    "longitude": 4.7109049552402436,
-    "latitude": -0.04736807060082282,
+    "longitude": 0.09820056935323335,
+    "latitude": -0.038104274718665065,
     "caption": "Delfínci - Herna"
   },
   {
     "id": "delfini-wc",
     "url": "27-delfini-zachod.jpg",
-    "longitude": 4.041731985868891,
-    "latitude": -0.04868940004358002,
+    "longitude": 3.6709168089801603,
+    "latitude": -0.027477065091003894,
     "caption": "Delfínci - WC"
+  },
+  {
+    "id": "chodba-2-patro-kuchyne",
+    "url": "30-kuchyn-2-patro.jpg",
+    "longitude": 6.232278159941024,
+    "latitude": 0.05287162110118815,
+    "caption": "Kuchyňka - Druhé patro"
+  },
+  {
+    "id": "chodba-2-patro-didakticky-kabinet",
+    "url": "29-didakticky-kabinet.jpg",
+    "longitude": 0.18959966051524044,
+    "latitude": 0.050148077512699896,
+    "caption": "Didaktický kabinet - Druhé patro"
   }
 ]
