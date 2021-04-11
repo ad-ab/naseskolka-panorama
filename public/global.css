@@ -68,3 +68,11 @@ button:not(:disabled):active {
 button:focus {
   border-color: #666;
 }
+
+.psv-marker {
+  transition: 0.2s ease-in-out opacity;
+}
+
+.psv-marker:hover {
+  opacity: 0.6;
+}

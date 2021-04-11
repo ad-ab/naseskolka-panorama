@@ -28,6 +28,7 @@
           image: `assets/${mark.img}`,
           latitude: photo.latitude,
           longitude: photo.longitude,
+          className: "marker",
         };
       });
 
@@ -52,8 +53,8 @@
       new Animation({
         properties: {
           lat: { start: -Math.PI / 2, end: pan.latitude },
-          long: { start: Math.PI, end: pan.longitude },
-          zoom: { start: 0, end: 30 },
+          long: { start: 2 * Math.PI, end: pan.longitude },
+          zoom: { start: 0, end: 10 },
           fisheye: { start: 2, end: 0 },
         },
         duration: 2000,

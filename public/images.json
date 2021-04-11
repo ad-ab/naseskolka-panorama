@@ -1,5 +1,12 @@
 [
   {
+    "id": "vchod-venku",
+    "url": "0-vchod-venku.jpg",
+    "longitude": 5.858055278347965,
+    "latitude": 0.3355090419979718,
+    "caption": "Před vstupem do školky"
+  },
+  {
     "id": "vstup",
     "url": "1-vchod.jpg",
     "longitude": 1.5277471873567117,
@@ -7,60 +14,54 @@
     "caption": "Vstup do školky"
   },
   {
-    "id": "2-chodba",
+    "id": "chodba-zabky",
     "url": "2-chodba-zabky.jpg",
-    "longitude": 3.0738083875147764,
-    "latitude": -0.06481505816574873,
-    "caption": "Chodba - Žabky"
+    "longitude": 4.564980942061356,
+    "latitude": -0.06353513966165103,
+    "caption": "Chodba - 1"
   },
+
   {
     "id": "2-satna",
     "url": "9-zabky-satna.jpg",
-    "longitude": 1.032008910091576,
-    "latitude": 0.11019712932860948,
+    "longitude": 1.674474482715747,
+    "latitude": -0.08223691150187085,
     "caption": "Šatna - Žabky"
-  },
-  {
-    "id": "3-chodba",
-    "url": "3-chodba-jezci.jpg",
-    "longitude": 3.2069669905896387,
-    "latitude": -0.08194229946563136,
-    "caption": "Chodba - Ježci"
   },
   {
     "id": "3-satna",
     "url": "8-jezci-satna.jpg",
-    "longitude": 5.4400662995025195,
-    "latitude": 0.16640764144348608,
+    "longitude": 1.5792816099306122,
+    "latitude": -0.07529008665369785,
     "caption": "Šatna - Ježci"
   },
   {
-    "id": "4-chodba",
+    "id": "chodba-veverky",
     "url": "4-chodba-veverky.jpg",
-    "longitude": 3.1238896560743363,
-    "latitude": -0.05806182240946223,
+    "longitude": 2.818034875628282,
+    "latitude": 0.013617342751676142,
     "caption": "Chodba - Veverky"
   },
   {
     "id": "4-satna",
     "url": "7-veverky-satna.jpg",
-    "longitude": 5.1112439379689985,
-    "latitude": 0.015287352169683244,
+    "longitude": 1.4487847708104136,
+    "latitude": -0.16037920614557155,
     "caption": "Šatna - Veverky"
-  },
-  {
-    "id": "5-chodba",
-    "url": "5-chodba-delfini.jpg",
-    "longitude": 3.060835352412499,
-    "latitude": -0.06263169030689486,
-    "caption": "Chodba - delfíni"
   },
   {
     "id": "5-satna",
     "url": "6-deflini-satna.jpg",
-    "longitude": 5.449802975775333,
-    "latitude": 0.004133489822154113,
+    "longitude": 1.5960465134628197,
+    "latitude": -0.09009009598837947,
     "caption": "Šatna - delfíni"
+  },
+  {
+    "id": "hlavni-kuchyne",
+    "url": "10-kuchyn.jpg",
+    "longitude": 2.1143672948715633,
+    "latitude": -0.030277369528184384,
+    "caption": "Kuchyně"
   },
   {
     "id": "chodba-1-patro",
@@ -72,22 +73,99 @@
   {
     "id": "zabky-1",
     "url": "12-zabky-1.jpg",
-    "longitude": 5.449802975775333,
-    "latitude": 0.004133489822154113,
-    "caption": "Žabky - stoly"
+    "longitude": 3.054285643055142,
+    "latitude": -0.06728810000241414,
+    "caption": "Žabky - Stoly"
   },
   {
     "id": "zabky-3",
-    "url": "14-zabky-3.jpg",
-    "longitude": 5.449802975775333,
-    "latitude": 0.004133489822154113,
-    "caption": "Žabky - WC"
+    "url": "13-zabky-2.jpg",
+    "longitude": 1.6787284253804042,
+    "latitude": -0.0684868541026431,
+    "caption": "Žabky - Herna"
   },
   {
     "id": "zabky-wc",
     "url": "15-zabky-zachod.jpg",
+    "longitude": 3.0548354185401525,
+    "latitude": -0.05750084758311491,
+    "caption": "Žabky - WC"
+  },
+  {
+    "id": "jezci-1",
+    "url": "16-jezci-1.jpg",
+    "longitude": 0.6569432563868906,
+    "latitude": -0.09161765949968581,
+    "caption": "Ježci - Stoly"
+  },
+  {
+    "id": "jezci-2",
+    "url": "17-jezci-2.jpg",
+    "longitude": 4.32872484190289,
+    "latitude": -0.0563797987147836,
+    "caption": "Ježci - Herna"
+  },
+  {
+    "id": "jezci-wc",
+    "url": "18-jezci-3-zachod.jpg",
+    "longitude": 0.4248043201701173,
+    "latitude": -0.3287298966214194,
+    "caption": "Jezci - WC"
+  },
+  {
+    "id": "chodba-1-patro-kuchyne",
+    "url": "20-chodba-1-patro-kuchyn.jpg",
+    "longitude": 5.449802975775333,
+    "latitude": 0.004133489822154113,
+    "caption": "Kuchyňka - První patro"
+  },
+  {
+    "id": "chodba-2-patro",
+    "url": "28-chodba-veverky-delfini.jpg",
+    "longitude": 0.700762632670038,
+    "latitude": -0.22781401495202203,
+    "caption": "Chodba - Druhé Patro"
+  },
+  {
+    "id": "veverky-1",
+    "url": "21-veverky-1.jpg",
+    "longitude": 6.20482678406698,
+    "latitude": -0.1514569349627004,
+    "caption": "Veverky - Stoly"
+  },
+  {
+    "id": "veverky-2",
+    "url": "22-veverky-2.jpg",
+    "longitude": 0.6802992745723939,
+    "latitude": -0.1547696309094846,
+    "caption": "Veverky - Herna"
+  },
+  {
+    "id": "veverky-wc",
+    "url": "23-veverky-zachod.jpg",
+    "longitude": 0.02888906050452649,
+    "latitude": -0.11501167097821452,
+    "caption": "Veverky - WC"
+  },
+  {
+    "id": "delfini-1",
+    "url": "25-delfini-1.jpg",
+    "longitude": 0.6569432563868906,
+    "latitude": -0.09161765949968581,
+    "caption": "Delfínci - Stoly"
+  },
+  {
+    "id": "delfini-2",
+    "url": "26-delfini-2.jpg",
+    "longitude": 4.7109049552402436,
+    "latitude": -0.04736807060082282,
+    "caption": "Delfínci - Herna"
+  },
+  {
+    "id": "delfini-wc",
+    "url": "27-delfini-zachod.jpg",
     "longitude": 4.041731985868891,
     "latitude": -0.04868940004358002,
-    "caption": "Žabky - WC"
+    "caption": "Delfínci - WC"
   }
 ]
