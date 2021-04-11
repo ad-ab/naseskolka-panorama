@@ -199,9 +199,14 @@
     "img": "next.png",
     "photos": [
       {
+        "id": "chodba-2-patro",
+        "longitude": 0.26836471862865274,
+        "latitude": -0.6317153372509616
+      },
+      {
         "id": "chodba-veverky",
-        "longitude": 4.696700361685934,
-        "latitude": -0.13735622301382966
+        "longitude": 4.685829444594267,
+        "latitude": -0.23963294523979628
       },
       {
         "id": "zabky-1",
@@ -371,8 +376,18 @@
       },
       {
         "id": "delfini-1",
-        "longitude": 1.5460762410245252,
-        "latitude": -0.019731661304742465
+        "longitude": 0.5724722867342357,
+        "latitude": -0.1064843839724281
+      },
+      {
+        "id": "chodba-2-patro-didakticky-kabinet",
+        "longitude": 3.248844866096259,
+        "latitude": -0.06980580286017801
+      },
+      {
+        "id": "chodba-2-patro-kuchyne",
+        "longitude": 3.595109984422934,
+        "latitude": -0.10119290184582264
       }
     ]
   },
@@ -384,8 +399,8 @@
     "photos": [
       {
         "id": "chodba-2-patro",
-        "longitude": 1.4107475046173796,
-        "latitude": -0.07417842433473476
+        "longitude": 1.973913542028525,
+        "latitude": -0.09919481705033517
       },
       {
         "id": "veverky-wc",
@@ -433,18 +448,18 @@
     "photos": [
       {
         "id": "chodba-2-patro",
-        "longitude": 0.1603078111935514,
-        "latitude": 0.06868273695372751
+        "longitude": 0.7570963839003398,
+        "latitude": 0.03595072442942593
       },
       {
         "id": "delfini-wc",
-        "longitude": 0.9193096794333526,
-        "latitude": 0.12364467913783916
+        "longitude": 1.7190528208884204,
+        "latitude": -0.12323813080253099
       },
       {
         "id": "delfini-2",
-        "longitude": 3.1557851291922443,
-        "latitude": -0.002107420992336184
+        "longitude": 4.12340599782333,
+        "latitude": -0.15181366021036014
       }
     ]
   },
@@ -456,8 +471,8 @@
     "photos": [
       {
         "id": "delfini-1",
-        "longitude": 4.690419997019993,
-        "latitude": -0.01961180083005365
+        "longitude": 3.1460296924453983,
+        "latitude": -0.053876271451940294
       }
     ]
   },
@@ -469,8 +484,70 @@
     "photos": [
       {
         "id": "delfini-1",
-        "longitude": 2.7473385995486943,
-        "latitude": -0.10705885951200789
+        "longitude": 1.59071675082209,
+        "latitude": -0.10806876127700238
+      }
+    ]
+  },
+  {
+    "id": "didakticky-kabinet",
+    "target": "chodba-2-patro-didakticky-kabinet",
+    "tooltip": "Didaktický kabinet",
+    "img": "next.png",
+    "photos": [
+      {
+        "id": "chodba-2-patro",
+        "longitude": 1.692891893738253,
+        "latitude": -0.02937900428173501
+      }
+    ]
+  },
+  {
+    "id": "kuchynka-2-patro",
+    "target": "chodba-2-patro-kuchyne",
+    "tooltip": "Kuchyňka - 2. Patro",
+    "img": "next.png",
+    "photos": [
+      {
+        "id": "chodba-2-patro",
+        "longitude": 0.9982161185150668,
+        "latitude": -0.00010052813848582254
+      }
+    ]
+  },
+  {
+    "id": "knihovna-2-patro",
+    "tooltip": "Knihovna",
+    "img": "info.png",
+    "photos": [
+      {
+        "id": "chodba-2-patro",
+        "longitude": 0.9296886062649643,
+        "latitude": -0.18718759826827647
+      }
+    ]
+  },
+  {
+    "id": "kroužky-1-patro",
+    "tooltip": "Kroužky",
+    "img": "info.png",
+    "photos": [
+      {
+        "id": "chodba-1-patro",
+        "longitude": 5.170316842952561,
+        "latitude": 0.16525720040258474
+      }
+    ]
+  },
+  {
+    "id": "baterky",
+    "tooltip": "Baterkožrout",
+    "img": "info.png",
+    "photos": [
+      {
+        "id": "chodba-veverky",
+        "longitude": 6.270398923349293,
+        "latitude": -0.2584435958446891
       }
     ]
   }
