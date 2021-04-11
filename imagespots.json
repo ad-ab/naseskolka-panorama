@@ -24,9 +24,21 @@
     ]
   },
   {
-    "id": "1-vstup",
-    "target": "2-chodba",
-    "tooltip": "Chodba - Žabky",
+    "id": "reditelna",
+    "tooltip": "Ředitelna",
+    "img": "info.png",
+    "photos": [
+      {
+        "id": "chodba-zabky",
+        "longitude": 3.46011086979128,
+        "latitude": -0.0852497076558636
+      }
+    ]
+  },
+  {
+    "id": "chodba-zabky",
+    "target": "chodba-zabky",
+    "tooltip": "Chodba - 1",
     "img": "next.png",
     "photos": [
       {
@@ -36,13 +48,31 @@
       },
       {
         "id": "2-satna",
-        "longitude": 4.212045961603054,
-        "latitude": -0.07078685835059306
+        "longitude": 1.674474482715747,
+        "latitude": -0.08223691150187085
       },
       {
-        "id": "3-chodba",
-        "longitude": 1.6431803867082615,
-        "latitude": -0.4305469688433563
+        "id": "3-satna",
+        "longitude": 1.5792816099306122,
+        "latitude": -0.07529008665369785
+      },
+      {
+        "id": "chodba-veverky",
+        "longitude": 1.3883746952621951,
+        "latitude": -0.20712408566075657
+      }
+    ]
+  },
+  {
+    "id": "před-vchodem",
+    "target": "vchod-venku",
+    "tooltip": "Před vstupem",
+    "img": "next.png",
+    "photos": [
+      {
+        "id": "vstup",
+        "longitude": 4.8652506217653615,
+        "latitude": -0.15897568892983815
       }
     ]
   },
@@ -53,9 +83,14 @@
     "img": "next.png",
     "photos": [
       {
-        "id": "2-chodba",
-        "longitude": 1.5488063013031963,
-        "latitude": -0.025261599295222537
+        "id": "chodba-zabky",
+        "longitude": 3.0909062966834697,
+        "latitude": -0.0814266621713331
+      },
+      {
+        "id": "vchod-venku",
+        "longitude": 5.97056985317565,
+        "latitude": 0.12226870372155574
       }
     ]
   },
@@ -66,68 +101,55 @@
     "img": "next.png",
     "photos": [
       {
-        "id": "2-chodba",
-        "longitude": 3.0643347585527607,
-        "latitude": -0.07189903627619953
-      }
-    ]
-  },
-  {
-    "id": "chodba-jezci",
-    "target": "3-chodba",
-    "tooltip": "Chodba - Ježci",
-    "img": "next.png",
-    "photos": [
-      {
-        "id": "2-chodba",
-        "longitude": 4.573505761538147,
-        "latitude": -0.4675485474917327
-      },
-      {
-        "id": "3-satna",
-        "longitude": 2.393582841778416,
-        "latitude": -0.034757373139980396
-      },
-      {
-        "id": "4-chodba",
-        "longitude": 1.5882016381955535,
-        "latitude": -0.41063004365503764
+        "id": "chodba-zabky",
+        "longitude": 3.7955479780407058,
+        "latitude": -0.15663371270169257
       }
     ]
   },
   {
     "id": "satna-jezci",
     "target": "3-satna",
-    "tooltip": "Šatna - Žabky",
+    "tooltip": "Šatna - Ježci",
     "img": "next.png",
     "photos": [
       {
-        "id": "3-chodba",
-        "longitude": 3.188359047961927,
-        "latitude": -0.05119071411919629
+        "id": "chodba-zabky",
+        "longitude": 5.221973108684435,
+        "latitude": -0.1559612668264696
       }
     ]
   },
   {
     "id": "chodba-veverky",
-    "target": "4-chodba",
-    "tooltip": "Chodba - Ježci",
+    "target": "chodba-veverky",
+    "tooltip": "Chodba - 2",
     "img": "next.png",
     "photos": [
       {
-        "id": "3-chodba",
-        "longitude": 4.64855985790185,
-        "latitude": -0.469072876886234
+        "id": "chodba-zabky",
+        "longitude": 6.202470720633315,
+        "latitude": -0.24279145098635624
       },
       {
         "id": "4-satna",
-        "longitude": 1.933386905814407,
-        "latitude": -0.10240427065957514
+        "longitude": 1.4487847708104136,
+        "latitude": -0.16037920614557155
       },
       {
-        "id": "5-chodba",
-        "longitude": 1.5663767576111256,
-        "latitude": -0.42952186359521605
+        "id": "5-satna",
+        "longitude": 1.5960465134628197,
+        "latitude": -0.09009009598837947
+      },
+      {
+        "id": "chodba-1-patro",
+        "longitude": 0.14515257584985392,
+        "latitude": -0.6434167267346562
+      },
+      {
+        "id": "hlavni-kuchyne",
+        "longitude": 3.225844902452756,
+        "latitude": -0.050869334101546704
       }
     ]
   },
@@ -138,32 +160,9 @@
     "img": "next.png",
     "photos": [
       {
-        "id": "4-chodba",
-        "longitude": 3.188359047961927,
-        "latitude": -0.05119071411919629
-      }
-    ]
-  },
-  {
-    "id": "chodba-delfinci",
-    "target": "5-chodba",
-    "tooltip": "Chodba - Ježci",
-    "img": "next.png",
-    "photos": [
-      {
-        "id": "4-chodba",
-        "longitude": 4.716372643645762,
-        "latitude": -0.4916843825748938
-      },
-      {
-        "id": "5-satna",
-        "longitude": 5.482668536361971,
-        "latitude": -0.05200076153867217
-      },
-      {
-        "id": "chodba-1-patro",
-        "longitude": 5.31633238488449,
-        "latitude": -0.5880144502433549
+        "id": "chodba-veverky",
+        "longitude": 2.200257980719748,
+        "latitude": -0.142294091077537
       }
     ]
   },
@@ -174,9 +173,22 @@
     "img": "next.png",
     "photos": [
       {
-        "id": "5-chodba",
-        "longitude": 3.030337453417041,
-        "latitude": -0.1702476725764397
+        "id": "chodba-veverky",
+        "longitude": 3.5218180840007483,
+        "latitude": -0.17311339323749797
+      }
+    ]
+  },
+  {
+    "id": "kuchyne",
+    "target": "hlavni-kuchyne",
+    "tooltip": "Kuchyně",
+    "img": "next.png",
+    "photos": [
+      {
+        "id": "chodba-veverky",
+        "longitude": 4.114818945779291,
+        "latitude": -0.08349840376359707
       }
     ]
   },
@@ -187,14 +199,42 @@
     "img": "next.png",
     "photos": [
       {
-        "id": "5-chodba",
+        "id": "chodba-veverky",
         "longitude": 4.696700361685934,
         "latitude": -0.13735622301382966
       },
       {
         "id": "zabky-1",
-        "longitude": 6.160381071690755,
-        "latitude": -0.0749014357947797
+        "longitude": 5.7159028983382285,
+        "latitude": -0.03203842154520142
+      },
+      {
+        "id": "jezci-1",
+        "longitude": 3.8274415417262446,
+        "latitude": -0.03696444157141765
+      },
+      {
+        "id": "chodba-2-patro",
+        "longitude": 6.026522425913989,
+        "latitude": -0.619176706068215
+      },
+      {
+        "id": "chodba-1-patro-kuchyne",
+        "longitude": 0.13777303957581366,
+        "latitude": -0.13641010658652797
+      }
+    ]
+  },
+  {
+    "id": "kuchynka-1-patro",
+    "target": "chodba-1-patro-kuchyne",
+    "tooltip": "Kuchyňka - 1. patro",
+    "img": "next.png",
+    "photos": [
+      {
+        "id": "chodba-1-patro",
+        "longitude": 4.370230200240286,
+        "latitude": -0.093410011329921
       }
     ]
   },
@@ -205,13 +245,13 @@
     "photos": [
       {
         "id": "chodba-1-patro",
-        "longitude": 5.3548682082399095,
-        "latitude": -0.13995933196673804
+        "longitude": 0.2324813475933705,
+        "latitude": -0.18607551890744078
       },
       {
-        "id": "5-chodba",
-        "longitude": 4.626938754958308,
-        "latitude": 0.33040962180316713
+        "id": "chodba-veverky",
+        "longitude": 4.568315262910868,
+        "latitude": 0.31103528413066606
       }
     ]
   },
@@ -223,18 +263,18 @@
     "photos": [
       {
         "id": "chodba-1-patro",
-        "longitude": 4.713835114643674,
-        "latitude": 0.0015341186023609676
+        "longitude": 5.871487298490285,
+        "latitude": -0.09563289899079752
       },
       {
         "id": "zabky-wc",
-        "longitude": 5.888779414072508,
-        "latitude": -0.3294653262622127
+        "longitude": 4.2717652788502445,
+        "latitude": -0.4373415382761645
       },
       {
         "id": "zabky-3",
-        "longitude": 5.845526704253434,
-        "latitude": -0.03401532102997118
+        "longitude": 3.8935038866966396,
+        "latitude": -0.12251137039598614
       }
     ]
   },
@@ -246,8 +286,8 @@
     "photos": [
       {
         "id": "zabky-1",
-        "longitude": 3.1069876795218687,
-        "latitude": 0.02264470661721374
+        "longitude": 3.054285643055142,
+        "latitude": -0.06728810000241414
       }
     ]
   },
@@ -259,8 +299,178 @@
     "photos": [
       {
         "id": "zabky-1",
-        "longitude": 5.024733164854425,
-        "latitude": -0.062398998264754146
+        "longitude": 4.665923447029928,
+        "latitude": -0.10444328140580494
+      }
+    ]
+  },
+  {
+    "id": "jezci-vstup",
+    "target": "jezci-1",
+    "tooltip": "Třída Ježci",
+    "img": "next.png",
+    "photos": [
+      {
+        "id": "chodba-1-patro",
+        "longitude": 3.487000747188129,
+        "latitude": -0.24795604174111152
+      },
+      {
+        "id": "jezci-wc",
+        "longitude": 4.765210607110988,
+        "latitude": -0.1491096262141749
+      },
+      {
+        "id": "jezci-2",
+        "longitude": 5.090803856899667,
+        "latitude": -0.1297927787324067
+      }
+    ]
+  },
+  {
+    "id": "jezci-herna",
+    "target": "jezci-2",
+    "tooltip": "Herna Ježci",
+    "img": "next.png",
+    "photos": [
+      {
+        "id": "jezci-1",
+        "longitude": 6.273003644031725,
+        "latitude": -0.030848950043042667
+      }
+    ]
+  },
+  {
+    "id": "jezci-wc",
+    "target": "jezci-wc",
+    "tooltip": "Ježci WC",
+    "img": "next.png",
+    "photos": [
+      {
+        "id": "jezci-1",
+        "longitude": 5.016426951569224,
+        "latitude": -0.1114503714945736
+      }
+    ]
+  },
+  {
+    "id": "schody-do-2-patra",
+    "target": "chodba-2-patro",
+    "tooltip": "Chodba 2. Patro",
+    "img": "next.png",
+    "photos": [
+      {
+        "id": "chodba-1-patro",
+        "longitude": 1.5004724291467146,
+        "latitude": -0.6325377989888707
+      },
+      {
+        "id": "veverky-1",
+        "longitude": 2.612405101890812,
+        "latitude": -0.0899429856030467
+      },
+      {
+        "id": "delfini-1",
+        "longitude": 1.5460762410245252,
+        "latitude": -0.019731661304742465
+      }
+    ]
+  },
+  {
+    "id": "veverky-vstup",
+    "target": "veverky-1",
+    "tooltip": "Třída Veverky",
+    "img": "next.png",
+    "photos": [
+      {
+        "id": "chodba-2-patro",
+        "longitude": 1.4107475046173796,
+        "latitude": -0.07417842433473476
+      },
+      {
+        "id": "veverky-wc",
+        "longitude": 1.4043286992899842,
+        "latitude": -0.16849746707600977
+      },
+      {
+        "id": "veverky-2",
+        "longitude": 0.6600800641029119,
+        "latitude": -0.058267565603375315
+      }
+    ]
+  },
+  {
+    "id": "veverky-herna",
+    "target": "veverky-2",
+    "tooltip": "Herna Veverky",
+    "img": "next.png",
+    "photos": [
+      {
+        "id": "veverky-1",
+        "longitude": 6.207352135109921,
+        "latitude": -0.035637320135245565
+      }
+    ]
+  },
+  {
+    "id": "veverky-wc",
+    "target": "veverky-wc",
+    "tooltip": "Veverky WC",
+    "img": "next.png",
+    "photos": [
+      {
+        "id": "veverky-1",
+        "longitude": 1.2084819867015515,
+        "latitude": -0.1212335402011584
+      }
+    ]
+  },
+  {
+    "id": "delfini-vstup",
+    "target": "delfini-1",
+    "tooltip": "Třída Delfínci",
+    "img": "next.png",
+    "photos": [
+      {
+        "id": "chodba-2-patro",
+        "longitude": 0.1603078111935514,
+        "latitude": 0.06868273695372751
+      },
+      {
+        "id": "delfini-wc",
+        "longitude": 0.9193096794333526,
+        "latitude": 0.12364467913783916
+      },
+      {
+        "id": "delfini-2",
+        "longitude": 3.1557851291922443,
+        "latitude": -0.002107420992336184
+      }
+    ]
+  },
+  {
+    "id": "delfini-herna",
+    "target": "delfini-2",
+    "tooltip": "Herna Delfínci",
+    "img": "next.png",
+    "photos": [
+      {
+        "id": "delfini-1",
+        "longitude": 4.690419997019993,
+        "latitude": -0.01961180083005365
+      }
+    ]
+  },
+  {
+    "id": "delfini-wc",
+    "target": "delfini-wc",
+    "tooltip": "Delfínci WC",
+    "img": "next.png",
+    "photos": [
+      {
+        "id": "delfini-1",
+        "longitude": 2.7473385995486943,
+        "latitude": -0.10705885951200789
       }
     ]
   }
