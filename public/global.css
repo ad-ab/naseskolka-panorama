@@ -76,3 +76,25 @@ button:focus {
 .psv-marker:hover {
   opacity: 0.6;
 }
+
+.tooltip-extended {
+  display: flex;
+  flex-direction: column;
+}
+
+.tooltip-image {
+  min-width: 400px;
+  min-height: 200px;
+  max-height: 400px;
+  padding: 8px;
+  flex: content;
+}
+
+.tooltip-image img {
+}
+
+.tooltip-text {
+  text-align: center;
+  padding: 8px;
+  flex: auto;
+}

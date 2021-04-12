@@ -15,16 +15,27 @@
   const loadMarkers = (pan) => {
     const photoId = pan.id;
 
+    const generateTooltip = (mark) => {
+      let tooltip = mark.description || mark.tooltip;
+      if (mark.tooltipImg) {
+        tooltip = `<div class="tooltip-extended">
+        <div class="tooltip-image"><img width="300" src='images/${mark.tooltipImg}'/></div>
+        <div class="tooltip-text">${tooltip}</div>
+      </div>`;
+      }
+      return tooltip;
+    };
+
     const filteredSpots = spots
       .filter(({ photos }) => photos.find(({ id }) => id === photoId))
       .map((mark) => {
         const photo = mark.photos.find(({ id }) => id === photoId);
         return {
-          tooltip: mark.description,
           width: 64,
           height: 64,
           scale: [0.5, 1],
           ...mark,
+          tooltip: generateTooltip(mark),
           image: `assets/${mark.img}`,
           latitude: photo.latitude,
           longitude: photo.longitude,
