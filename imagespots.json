@@ -3,6 +3,7 @@
     "id": "1-nastenka",
     "tooltip": "Nástěnka",
     "img": "info.png",
+    "tooltipImg": "details/nastenka-1.jpg",
     "photos": [
       {
         "id": "vstup",
@@ -13,7 +14,8 @@
   },
   {
     "id": "1-nastenka-2",
-    "tooltip": "Nástěnka<img width='300' height='200' src='images/1-vchod.jpg' />",
+    "tooltip": "Nástěnka",
+    "tooltipImg": "details/nastenka-2.jpg",
     "img": "info.png",
     "photos": [
       {
@@ -38,7 +40,7 @@
   {
     "id": "chodba-zabky",
     "target": "chodba-zabky",
-    "tooltip": "Chodba - 1",
+    "tooltip": "Chodba - Přízemí",
     "img": "next.png",
     "photos": [
       {
@@ -123,7 +125,7 @@
   {
     "id": "chodba-veverky",
     "target": "chodba-veverky",
-    "tooltip": "Chodba - 2",
+    "tooltip": "Chodba - Veverky",
     "img": "next.png",
     "photos": [
       {
@@ -150,6 +152,24 @@
         "id": "hlavni-kuchyne",
         "longitude": 3.225844902452756,
         "latitude": -0.050869334101546704
+      },
+      {
+        "id": "keramicka-pec",
+        "longitude": 3.3670658181391517,
+        "latitude": -0.3685407544700836
+      }
+    ]
+  },
+  {
+    "id": "pec-keramika",
+    "target": "keramicka-pec",
+    "tooltip": "Pec na kerameiku",
+    "img": "next.png",
+    "photos": [
+      {
+        "id": "chodba-veverky",
+        "longitude": 4.1302242153295925,
+        "latitude": -0.30612655840522796
       }
     ]
   },
@@ -169,7 +189,7 @@
   {
     "id": "satna-delfinci",
     "target": "5-satna",
-    "tooltip": "Šatna - Delfínci",
+    "tooltip": "Šatna - Delfíni",
     "img": "next.png",
     "photos": [
       {
@@ -443,7 +463,7 @@
   {
     "id": "delfini-vstup",
     "target": "delfini-1",
-    "tooltip": "Třída Delfínci",
+    "tooltip": "Třída Delfíni",
     "img": "next.png",
     "photos": [
       {
@@ -466,7 +486,7 @@
   {
     "id": "delfini-herna",
     "target": "delfini-2",
-    "tooltip": "Herna Delfínci",
+    "tooltip": "Herna Delfíni",
     "img": "next.png",
     "photos": [
       {
@@ -479,7 +499,7 @@
   {
     "id": "delfini-wc",
     "target": "delfini-wc",
-    "tooltip": "Delfínci WC",
+    "tooltip": "Delfíni WC",
     "img": "next.png",
     "photos": [
       {
@@ -505,7 +525,7 @@
   {
     "id": "kuchynka-2-patro",
     "target": "chodba-2-patro-kuchyne",
-    "tooltip": "Kuchyňka - 2. Patro",
+    "tooltip": "Kuchyňka",
     "img": "next.png",
     "photos": [
       {
@@ -548,6 +568,80 @@
         "id": "chodba-veverky",
         "longitude": 6.270398923349293,
         "latitude": -0.2584435958446891
+      }
+    ]
+  },
+  {
+    "id": "sklad-luzkovin-zabky",
+    "tooltip": "Sklad lůžkovin + Fotka",
+    "img": "info.png",
+    "photos": [
+      {
+        "id": "zabky-3",
+        "longitude": 2.403153469630454,
+        "latitude": -0.07746940114401313
+      }
+    ]
+  },
+  {
+    "id": "sklad-luzkovin-jezci",
+    "tooltip": "Sklad lůžkovin + Fotka",
+    "img": "info.png",
+    "photos": [
+      {
+        "id": "jezci-2",
+        "longitude": 0.2420033364802784,
+        "latitude": -0.05528025341977849
+      }
+    ]
+  },
+  {
+    "id": "sklad-luzkovin-veverky",
+    "tooltip": "Sklad lůžkovin + Fotka",
+    "img": "info.png",
+    "photos": [
+      {
+        "id": "veverky-2",
+        "longitude": 5.44376547945964,
+        "latitude": -0.050422163982726254
+      }
+    ]
+  },
+  {
+    "id": "sklad-luzkovin-delfini",
+    "tooltip": "Sklad lůžkovin + Fotka",
+    "img": "info.png",
+    "photos": [
+      {
+        "id": "delfini-2",
+        "longitude": 5.601569349641568,
+        "latitude": -0.06900253925800981
+      }
+    ]
+  },
+  {
+    "id": "vystavka-keramika",
+    "tooltip": "Výstavka keramiky",
+    "tooltipImg": "details/keramika-1.jpg",
+    "img": "info.png",
+    "photos": [
+      {
+        "id": "chodba-zabky",
+        "longitude": 0.29877400909473134,
+        "latitude": 0.13855817608884435
+      }
+    ]
+  },
+  {
+    "id": "filtr",
+    "tooltip": "Filtr vzduchu pro kryt",
+    "tooltipImg": "details/filtr.jpg",
+    "img": "info.png",
+    "photos": [
+      {
+        "id": "keramicka-pec",
+        "longitude": 4.912881126119117,
+        "latitude": -0.1341649417480859
       }
     ]
   }

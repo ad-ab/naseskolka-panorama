@@ -18,7 +18,7 @@
     "url": "2-chodba-zabky.jpg",
     "longitude": 4.564980942061356,
     "latitude": -0.06353513966165103,
-    "caption": "Chodba - 1"
+    "caption": "Přízemí - Chodba"
   },
 
   {
@@ -26,35 +26,35 @@
     "url": "9-zabky-satna.jpg",
     "longitude": 1.674474482715747,
     "latitude": -0.08223691150187085,
-    "caption": "Šatna - Žabky"
+    "caption": "Žabky - Šatna"
   },
   {
     "id": "3-satna",
     "url": "8-jezci-satna.jpg",
     "longitude": 1.5792816099306122,
     "latitude": -0.07529008665369785,
-    "caption": "Šatna - Ježci"
+    "caption": "Ježci - Šatna"
   },
   {
     "id": "chodba-veverky",
     "url": "4-chodba-veverky.jpg",
     "longitude": 2.818034875628282,
     "latitude": 0.013617342751676142,
-    "caption": "Chodba - Veverky"
+    "caption": "Veverky - Chodba"
   },
   {
     "id": "4-satna",
     "url": "7-veverky-satna.jpg",
     "longitude": 1.4487847708104136,
     "latitude": -0.16037920614557155,
-    "caption": "Šatna - Veverky"
+    "caption": "Veverky - Šatna"
   },
   {
     "id": "5-satna",
     "url": "6-deflini-satna.jpg",
     "longitude": 1.5960465134628197,
     "latitude": -0.09009009598837947,
-    "caption": "Šatna - delfíni"
+    "caption": "Delfíni - Šatna"
   },
   {
     "id": "hlavni-kuchyne",
@@ -64,18 +64,25 @@
     "caption": "Kuchyně"
   },
   {
+    "id": "keramicka-pec",
+    "url": "31-pec.jpg",
+    "longitude": 0.09471627296384548,
+    "latitude": -0.1960793897823158,
+    "caption": "Pec na keramiku"
+  },
+  {
     "id": "chodba-1-patro",
     "url": "20-chodba-jezci-zabky.jpg",
     "longitude": 5.449802975775333,
     "latitude": 0.004133489822154113,
-    "caption": "Chodba - První patro"
+    "caption": "První patro - Chodba"
   },
   {
     "id": "zabky-1",
     "url": "12-zabky-1.jpg",
     "longitude": 3.054285643055142,
     "latitude": -0.06728810000241414,
-    "caption": "Žabky - Stoly"
+    "caption": "Žabky - Třída"
   },
   {
     "id": "zabky-3",
@@ -96,7 +103,7 @@
     "url": "16-jezci-1.jpg",
     "longitude": 0.6569432563868906,
     "latitude": -0.09161765949968581,
-    "caption": "Ježci - Stoly"
+    "caption": "Ježci - Třída"
   },
   {
     "id": "jezci-2",
@@ -117,21 +124,21 @@
     "url": "20-chodba-1-patro-kuchyn.jpg",
     "longitude": 5.449802975775333,
     "latitude": 0.004133489822154113,
-    "caption": "Kuchyňka - První patro"
+    "caption": "První patro - Kuchyňka"
   },
   {
     "id": "chodba-2-patro",
     "url": "28-chodba-veverky-delfini.jpg",
     "longitude": 0.700762632670038,
     "latitude": -0.22781401495202203,
-    "caption": "Chodba - Druhé Patro"
+    "caption": "Druhé Patro - Chodba"
   },
   {
     "id": "veverky-1",
     "url": "21-veverky-1.jpg",
     "longitude": 6.20482678406698,
     "latitude": -0.1514569349627004,
-    "caption": "Veverky - Stoly"
+    "caption": "Veverky - Třída"
   },
   {
     "id": "veverky-2",
@@ -152,34 +159,34 @@
     "url": "25-delfini-1.jpg",
     "longitude": 2.5820142825500985,
     "latitude": -0.004116612085534932,
-    "caption": "Delfínci - Stoly"
+    "caption": "Delfíni - Třída"
   },
   {
     "id": "delfini-2",
     "url": "26-delfini-2.jpg",
     "longitude": 0.09820056935323335,
     "latitude": -0.038104274718665065,
-    "caption": "Delfínci - Herna"
+    "caption": "Delfíni - Herna"
   },
   {
     "id": "delfini-wc",
     "url": "27-delfini-zachod.jpg",
     "longitude": 3.6709168089801603,
     "latitude": -0.027477065091003894,
-    "caption": "Delfínci - WC"
+    "caption": "Delfíni - WC"
   },
   {
     "id": "chodba-2-patro-kuchyne",
     "url": "30-kuchyn-2-patro.jpg",
     "longitude": 6.232278159941024,
     "latitude": 0.05287162110118815,
-    "caption": "Kuchyňka - Druhé patro"
+    "caption": "Druhé patro - Kuchyňka"
   },
   {
     "id": "chodba-2-patro-didakticky-kabinet",
     "url": "29-didakticky-kabinet.jpg",
     "longitude": 0.18959966051524044,
     "latitude": 0.050148077512699896,
-    "caption": "Didaktický kabinet - Druhé patro"
+    "caption": "Druhé patro - Didaktický kabinet"
   }
 ]
