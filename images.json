@@ -1,5 +1,12 @@
 [
   {
+    "id": "zahrada-0",
+    "url": "z0.jpg",
+    "longitude": 5.4182361795260725,
+    "latitude": 0.21242258284960358,
+    "caption": "Vstup do areálu školky"
+  },
+  {
     "id": "vchod-venku",
     "url": "0-vchod-venku.jpg",
     "longitude": 5.858055278347965,
@@ -188,5 +195,90 @@
     "longitude": 0.18959966051524044,
     "latitude": 0.050148077512699896,
     "caption": "Druhé patro - Didaktický kabinet"
+  },
+
+  {
+    "id": "zahrada-2",
+    "url": "z2.jpg",
+    "longitude": 5.830821879642886,
+    "latitude": 0.15263523613410634,
+    "caption": "Vyhlídka na zahradu"
+  },
+  {
+    "id": "zahrada-3",
+    "url": "z3.jpg",
+    "longitude": 2.0344069238791307,
+    "latitude": 0.026313245389194773,
+    "caption": "Zahrada"
+  },
+  {
+    "id": "zahrada-4",
+    "url": "z4.jpg",
+    "longitude": 5.73122678720858,
+    "latitude": 0.040683246949755114,
+    "caption": "Zahrada"
+  },
+  {
+    "id": "zahrada-5",
+    "url": "z5.jpg",
+    "longitude": 5.50660337377344,
+    "latitude": 0.10981491350827888,
+    "caption": "Zahrada"
+  },
+  {
+    "id": "zahrada-6",
+    "url": "z6.jpg",
+    "longitude": 5.314678749700447,
+    "latitude": 0.09340913001464757,
+    "caption": "Zahrada - Uprostřed špalíků"
+  },
+  {
+    "id": "zahrada-7",
+    "url": "z7.jpg",
+    "longitude": 2.3769758160950447,
+    "latitude": 0.10487783744447898,
+    "caption": "Zahrada"
+  },
+  {
+    "id": "zahrada-8",
+    "url": "z8.jpg",
+    "longitude": 0.18959966051524044,
+    "latitude": 0.050148077512699896,
+    "caption": "Zahrada - Mezi fontánkou a úly"
+  },
+  {
+    "id": "zahrada-9",
+    "url": "z9.jpg",
+    "longitude": 0.18959966051524044,
+    "latitude": 0.050148077512699896,
+    "caption": "Zahrada - Roh zahradního domku"
+  },
+  {
+    "id": "zahrada-10",
+    "url": "z10.jpg",
+    "longitude": 0.18959966051524044,
+    "latitude": 0.050148077512699896,
+    "caption": "Zahrada - Prolézačky"
+  },
+  {
+    "id": "zahrada-11",
+    "url": "z11.jpg",
+    "longitude": 0.18959966051524044,
+    "latitude": 0.050148077512699896,
+    "caption": "Zahrada - Roh zahradního domku"
+  },
+  {
+    "id": "zahrada-12",
+    "url": "z12.jpg",
+    "longitude": 0.18959966051524044,
+    "latitude": 0.050148077512699896,
+    "caption": "Zahrada - Roh školky"
+  },
+  {
+    "id": "zahrada-13",
+    "url": "z13.jpg",
+    "longitude": 0.18959966051524044,
+    "latitude": 0.050148077512699896,
+    "caption": "Boční vchod do kuchyně"
   }
 ]

@@ -75,6 +75,16 @@
         "id": "vstup",
         "longitude": 4.8652506217653615,
         "latitude": -0.15897568892983815
+      },
+      {
+        "id": "zahrada-0",
+        "longitude": 4.584273138801655,
+        "latitude": -0.21992891829664085
+      },
+      {
+        "id": "zahrada-2",
+        "longitude": 2.079531443357002,
+        "latitude": -0.09723605059085205
       }
     ]
   },
@@ -84,6 +94,11 @@
     "tooltip": "Vstup",
     "img": "next.png",
     "photos": [
+      {
+        "id": "zahrada-0",
+        "longitude": 5.498029132054624,
+        "latitude": 0.14258415299445204
+      },
       {
         "id": "chodba-zabky",
         "longitude": 3.0909062966834697,
@@ -642,6 +657,60 @@
         "id": "keramicka-pec",
         "longitude": 4.912881126119117,
         "latitude": -0.1341649417480859
+      }
+    ]
+  },
+  {
+    "id": "zahrada-bocni-vchod",
+    "target": "zahrada-13",
+    "tooltip": "Boční vchod do kuchyně",
+    "img": "next.png",
+    "photos": [
+      {
+        "id": "zahrada-0",
+        "longitude": 6.202206656242853,
+        "latitude": -0.017658273996676632
+      }
+    ]
+  },
+  {
+    "id": "vchod-skolka",
+    "target": "zahrada-0",
+    "tooltip": "Vstup do areálu školky",
+    "img": "next.png",
+    "photos": [
+      {
+        "id": "zahrada-13",
+        "longitude": 6.202206656242853,
+        "latitude": -0.017658273996676632
+      },
+      {
+        "id": "zahrada-2",
+        "longitude": 1.9753964590267334,
+        "latitude": -0.03224791520082526
+      },
+      {
+        "id": "vchod-venku",
+        "longitude": 1.003446993398085,
+        "latitude": -0.2856242223081553
+      }
+    ]
+  },
+  {
+    "id": "zahrada-vyhlidka",
+    "target": "zahrada-2",
+    "tooltip": "Vstup do areálu školky",
+    "img": "next.png",
+    "photos": [
+      {
+        "id": "zahrada-0",
+        "longitude": 4.815374454143134,
+        "latitude": -0.06627697909689956
+      },
+      {
+        "id": "vchod-venku",
+        "longitude": 4.712727103477297,
+        "latitude": -0.09981259923834473
       }
     ]
   }
