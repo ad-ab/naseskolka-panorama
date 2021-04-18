@@ -280,8 +280,9 @@
   },
   {
     "id": "nastenka-adopce",
-    "tooltip": "Nastenka - Obrazek",
+    "tooltip": "Adopce - Fiona",
     "img": "info.png",
+    "tooltipImg": "details/fiona.jpg",
     "photos": [
       {
         "id": "chodba-1-patro",
@@ -553,6 +554,8 @@
   {
     "id": "knihovna-2-patro",
     "tooltip": "Knihovna",
+    "tooltipImg": "details/knihovna.jpg",
+
     "img": "info.png",
     "photos": [
       {
@@ -566,6 +569,7 @@
     "id": "kroužky-1-patro",
     "tooltip": "Kroužky",
     "img": "info.png",
+    "tooltipImg": "details/krouzky.jpg",
     "photos": [
       {
         "id": "chodba-1-patro",
@@ -578,6 +582,7 @@
     "id": "baterky",
     "tooltip": "Baterkožrout",
     "img": "info.png",
+    "tooltipImg": "details/baterkozrout.jpg",
     "photos": [
       {
         "id": "chodba-veverky",
@@ -588,8 +593,9 @@
   },
   {
     "id": "sklad-luzkovin-zabky",
-    "tooltip": "Sklad lůžkovin + Fotka",
+    "tooltip": "Sklad lůžkovin žabky",
     "img": "info.png",
+    "tooltipImg": "details/luzkoviny-zabky.jpg",
     "photos": [
       {
         "id": "zabky-3",
@@ -600,7 +606,8 @@
   },
   {
     "id": "sklad-luzkovin-jezci",
-    "tooltip": "Sklad lůžkovin + Fotka",
+    "tooltip": "Sklad lůžkovin ježci",
+    "tooltipImg": "details/luzkoviny-jezci.jpg",
     "img": "info.png",
     "photos": [
       {
@@ -612,8 +619,9 @@
   },
   {
     "id": "sklad-luzkovin-veverky",
-    "tooltip": "Sklad lůžkovin + Fotka",
+    "tooltip": "Sklad lůžkovin veverky",
     "img": "info.png",
+    "tooltipImg": "details/luzkoviny-veverky.jpg",
     "photos": [
       {
         "id": "veverky-2",
@@ -624,7 +632,8 @@
   },
   {
     "id": "sklad-luzkovin-delfini",
-    "tooltip": "Sklad lůžkovin + Fotka",
+    "tooltip": "Sklad lůžkovin delfini",
+    "tooltipImg": "details/luzkoviny-delfini.jpg",
     "img": "info.png",
     "photos": [
       {
@@ -699,7 +708,7 @@
   {
     "id": "zahrada-vyhlidka",
     "target": "zahrada-2",
-    "tooltip": "Vstup do areálu školky",
+    "tooltip": "Vyhlídka na zahradu",
     "img": "next.png",
     "photos": [
       {
