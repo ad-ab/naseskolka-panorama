@@ -11,20 +11,10 @@
   let viewer;
   let isLoading = false;
   let markersPlugin;
+  let image;
 
   const loadMarkers = (pan) => {
     const photoId = pan.id;
-
-    const generateTooltip = (mark) => {
-      let tooltip = mark.description || mark.tooltip;
-      if (mark.tooltipImg) {
-        tooltip = `<div class="tooltip-extended">
-        <div class="tooltip-image"><img width="300" src='images/${mark.tooltipImg}'/></div>
-        <div class="tooltip-text">${tooltip}</div>
-      </div>`;
-      }
-      return tooltip;
-    };
 
     const filteredSpots = spots
       .filter(({ photos }) => photos.find(({ id }) => id === photoId))
@@ -35,7 +25,7 @@
           height: 64,
           scale: [0.5, 1],
           ...mark,
-          tooltip: generateTooltip(mark),
+          tooltip: mark.description || mark.tooltip,
           image: `assets/${mark.img}`,
           latitude: photo.latitude,
           longitude: photo.longitude,
@@ -90,22 +80,24 @@
     markersPlugin = viewer.getPlugin(MarkersPlugin);
 
     markersPlugin.on("select-marker", (e, marker) => {
-      const { target } = marker.config;
+      const { target, tooltipImg } = marker.config;
       marker.showTooltip(e);
       if (target) {
         index = panoramaArray.indexOf(
           panoramaArray.find((p) => p.id === target)
         );
       }
+      if (tooltipImg) image = `images/${tooltipImg}`;
     });
 
     markersPlugin.on("unselect-marker", (marker) => {
-      marker.hideTooltip();
+      if (marker.hideTooltip) marker.hideTooltip();
     });
   }
 
   $: if (viewer && panoramaArray && panoramaArray.length > 0) {
     const pan = panoramaArray[index];
+    console.log(index);
 
     // set panorama
     isLoading = true;
@@ -120,6 +112,9 @@
   }
 
   onMount(async () => {
+    // const { i } = queryString.parse(window.location.search);
+    // if (i) index = i;
+
     fetch("images.json")
       .then((response) => response.json())
       .then((data) => {
@@ -137,7 +132,6 @@
   };
   const prevPanorama = () => {
     index = (--index + panoramaArray.length) % panoramaArray.length;
-    console.log(index);
   };
 </script>
 
@@ -149,6 +143,10 @@
   <button class="next control" disabled={isLoading} on:click={nextPanorama}
     >&gt;</button
   >
+</div>
+
+<div class="image-popup" class:hidden={!image} on:click={() => (image = null)}>
+  <img src={image} on:click={() => (image = null)} alt="Detail značky" />
 </div>
 
 <style>
@@ -171,9 +169,7 @@
     right: 0;
     bottom: 0;
     display: flex;
-    /* flex-direction: column; */
     justify-content: space-between;
-    /* justify-items: center; */
     align-items: center;
   }
   .control {
@@ -182,7 +178,6 @@
     color: white;
     font-weight: 700;
     opacity: 60%;
-    /* position: absolute; */
     bottom: 16px;
     font-size: 32px;
     cursor: pointer;
@@ -201,5 +196,27 @@
   }
   .prev {
     left: 0;
+  }
+  .image-popup {
+    text-align: center;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    padding: 5%;
+    z-index: 200;
+    background-color: rgba(0, 0, 0, 0.6);
+  }
+
+  .image-popup img {
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    max-height: 100%;
+  }
+
+  .hidden {
+    display: none;
   }
 </style>
