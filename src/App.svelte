@@ -25,8 +25,9 @@
       panorama: `images/${panorama.url}`,
       caption: panorama.caption,
       defaultZoomLvl: 0,
+      autorotateSpeed: 0.15,
       fisheye: 2.2,
-      navbar: ["zoom", "caption", "fullscreen"],
+      navbar: ["autorotate", "zoom", "caption", "fullscreen"],
       plugins: [[MarkersPlugin]],
     });
 

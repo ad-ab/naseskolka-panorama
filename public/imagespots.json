@@ -722,5 +722,231 @@
         "latitude": -0.09981259923834473
       }
     ]
+  },
+  {
+    "id": "zahrada-prostredek",
+    "target": "zahrada-3",
+    "tooltip": "Zahrada",
+    "img": "next.png",
+    "photos": [
+      {
+        "id": "zahrada-2",
+        "longitude": 6.241366522436531,
+        "latitude": -0.05788604473923353
+      },
+      {
+        "id": "zahrada-4",
+        "longitude": 6.2459392276618635,
+        "latitude": -0.03499100111293618
+      },
+      {
+        "id": "zahrada-5",
+        "longitude": 0.38301262951385556,
+        "latitude": -0.05173212284080875
+      },
+      {
+        "id": "zahrada-6",
+        "longitude": 1.425059620065289,
+        "latitude": -0.04426288923100019
+      },
+      {
+        "id": "zahrada-7",
+        "longitude": 4.048673818332992,
+        "latitude": -0.044378231811546875
+      }
+    ]
+  },
+  {
+    "id": "zahrada-cesta-1",
+    "target": "zahrada-4",
+    "tooltip": "Zahrada - cesta",
+    "img": "next.png",
+    "photos": [
+      {
+        "id": "zahrada-2",
+        "longitude": 5.287003324909831,
+        "latitude": -0.0571728338506694
+      },
+      {
+        "id": "zahrada-3",
+        "longitude": 2.083741432317913,
+        "latitude": -0.09114357322379663
+      },
+      {
+        "id": "zahrada-5",
+        "longitude": 1.4751017342029715,
+        "latitude": -0.08694065855852906
+      },
+      {
+        "id": "zahrada-6",
+        "longitude": 2.057368735502931,
+        "latitude": -0.0507123394649549
+      }
+    ]
+  },
+  {
+    "id": "zahrada-cesta-2",
+    "target": "zahrada-5",
+    "tooltip": "Zahrada - cesta",
+    "img": "next.png",
+    "photos": [
+      {
+        "id": "zahrada-2",
+        "longitude": 5.590959637087918,
+        "latitude": -0.0328824000669814
+      },
+      {
+        "id": "zahrada-3",
+        "longitude": 2.794726846518832,
+        "latitude": -0.09552310302136924
+      },
+      {
+        "id": "zahrada-4",
+        "longitude": 4.993738557749021,
+        "latitude": -0.08952271673416878
+      },
+      {
+        "id": "zahrada-6",
+        "longitude": 2.400359492411543,
+        "latitude": -0.09668157676389733
+      },
+      {
+        "id": "zahrada-7",
+        "longitude": 4.641542693102452,
+        "latitude": -0.09274962216846006
+      }
+    ]
+  },
+  {
+    "id": "zahrada-kruh",
+    "target": "zahrada-6",
+    "tooltip": "Zahrada - špalíky",
+    "img": "next.png",
+    "photos": [
+      {
+        "id": "zahrada-2",
+        "longitude": 6.081950891558758,
+        "latitude": -0.016841491326827107
+      },
+      {
+        "id": "zahrada-3",
+        "longitude": 3.580960358303962,
+        "latitude": -0.05245474166724384
+      },
+      {
+        "id": "zahrada-4",
+        "longitude": 5.298385261815817,
+        "latitude": -0.025970931852463908
+      },
+      {
+        "id": "zahrada-5",
+        "longitude": 5.17948715772887,
+        "latitude": -0.04975793303861287
+      },
+      {
+        "id": "zahrada-7",
+        "longitude": 3.8458353910913825,
+        "latitude": -0.1566377727696211
+      },
+      {
+        "id": "zahrada-8",
+        "longitude": 0.6450455976183281,
+        "latitude": -0.10694333218698304
+      }
+    ]
+  },
+  {
+    "id": "zahrada-roh",
+    "target": "zahrada-7",
+    "tooltip": "Zahrada - rozcesti",
+    "img": "next.png",
+    "photos": [
+      {
+        "id": "zahrada-3",
+        "longitude": 3.5000241477072955,
+        "latitude": -0.01795147503914829
+      },
+      {
+        "id": "zahrada-4",
+        "longitude": 5.298385261815817,
+        "latitude": -0.025970931852463908
+      },
+      {
+        "id": "zahrada-5",
+        "longitude": 4.826625443326311,
+        "latitude": -0.04821971431070171
+      },
+      {
+        "id": "zahrada-6",
+        "longitude": 3.8458353910913825,
+        "latitude": -0.1566377727696211
+      },
+      {
+        "id": "zahrada-8",
+        "longitude": 1.3230484338874084,
+        "latitude": -0.08616246442289821
+      },
+      {
+        "id": "zahrada-9",
+        "longitude": 0.8635056880061373,
+        "latitude": -0.09883258931558614
+      }
+    ]
+  },
+  {
+    "id": "zahrada-mezi",
+    "target": "zahrada-8",
+    "tooltip": "Zahrada - mezi fontánkou a úly",
+    "img": "next.png",
+    "photos": [
+      {
+        "id": "zahrada-5",
+        "longitude": 5.422763743586168,
+        "latitude": -0.040486466947190936
+      },
+      {
+        "id": "zahrada-6",
+        "longitude": 5.886238154615207,
+        "latitude": -0.14387963258404546
+      },
+      {
+        "id": "zahrada-7",
+        "longitude": 3.036619061649863,
+        "latitude": -0.1125092478092713
+      },
+      {
+        "id": "zahrada-9",
+        "longitude": 0.059097678239097805,
+        "latitude": -0.09253779601158074
+      }
+    ]
+  },
+  {
+    "id": "zahrada-pulkruh-1",
+    "target": "zahrada-9",
+    "tooltip": "Zahrada - roh zahradního domku",
+    "img": "next.png",
+    "photos": [
+      {
+        "id": "zahrada-5",
+        "longitude": 4.948991583008778,
+        "latitude": 0.0005666200092355744
+      },
+      {
+        "id": "zahrada-6",
+        "longitude": 5.073555984851023,
+        "latitude": -0.020537212500039814
+      },
+      {
+        "id": "zahrada-7",
+        "longitude": 1.7308865619025855,
+        "latitude": -0.03543889195925698
+      },
+      {
+        "id": "zahrada-8",
+        "longitude": 2.4662711560169965,
+        "latitude": -0.02928536600947429
+      }
+    ]
   }
 ]
